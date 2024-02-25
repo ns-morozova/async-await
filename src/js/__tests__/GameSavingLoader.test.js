@@ -8,7 +8,8 @@ test('Проверка класса GameSavingLoader', () => {
       const loadd = new GameSavingLoader(); 
       const response = await loadd.load();
       expect(response).toEqual(data);
-    } catch(err) {      
+    } catch(err) {
+      expect(err.message).toEqual('Ошибка');
     }
   })();
 });
